@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -14,6 +15,7 @@ module.exports = {
           '400': '#fae37c',
           '500': '#f5d546'
         },
+        primary: colors.gray,
         star: {
           'O': '#9bb0ff',
           'B': '#aabfff',

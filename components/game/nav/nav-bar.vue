@@ -8,10 +8,9 @@
 
 
         <transition name="slide-down">
-            <nav class="py-4 bg-slate-500 text-future-400 dark:bg-slate-800 border-future-400
+            <nav class="py-4 bg-future-400 bg-opacity-20 text-future-400 border-future-400
          border-r border-l border-b rounded-b h-min absolute top-0 left-0 w-full
-         lg:border-l-0 lg:border-y lg:rounded-r lg:h-auto lg:relative lg:w-auto lg:my-5" v-show="navBarShown"
-                id="game-nav">
+         lg:border-l-0 lg:border-y lg:rounded-r lg:h-auto lg:relative lg:w-auto" v-show="navBarShown" id="game-nav">
                 <ul class="flex flex-col items-center lg:items-start" @click="hideNavbarWhenClicked">
                     <li v-for="link in links" :key="link.caption"
                         class="px-4 py-2 hover:bg-opacity-50 hover:bg-future-400 transition-colors"

@@ -1,15 +1,21 @@
 
 <template>
-    <main class="min-h-screen w-full flex flex-col relative" v-if="authStore.token">
+    <main class="w-full h-full flex flex-col relative" v-if="authStore.token">
         <game-status-bar />
-        <section class="flex gap-4 flex-grow">
-            <game-nav-bar></game-nav-bar>
-            <div class="flex-grow p-3">
-                <slot />
+        <section class="flex gap-4 flex-grow h-full">
+            <div class="pt-3">
+                <game-nav-bar></game-nav-bar>
+            </div>
+
+            <div class="flex-grow p-3 min-h-full">
+                <div class="h-full bg-future-400 bg-opacity-20 rounded p-4 border border-future-400 entrance">
+                    <slot />
+                </div>
+
             </div>
         </section>
 
-
+        <game-chat />
         <site-footer></site-footer>
     </main>
     <div class="min-h-screen w-full flex bg-black bg-opacity-50" v-else>
@@ -26,7 +32,7 @@
 import { useAuthStore } from '../stores/authStore';
 useHead({
     bodyAttrs: {
-        class: "bg-slate-300 dark:bg-slate-600 dark:text-slate-50"
+        class: "dark:text-slate-50 h-screen w-full"
     }
 })
 
@@ -43,5 +49,10 @@ useMsal();
 html {
     font-family: "Exo 2";
     background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+}
+
+#__nuxt {
+    @apply w-full;
+    @apply h-full;
 }
 </style>

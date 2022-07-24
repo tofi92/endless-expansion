@@ -1,7 +1,7 @@
 
 <template>
     <div
-        class="border-b border-x lg:mx-4 slide-top border-future-400 rounded-b p-4 flex items-center bg-slate-500 text-future-400 dark:bg-slate-800">
+        class="border-b border-x lg:mx-4 slide-top border-future-400 rounded-b p-4 flex items-center text-future-400 bg-future-400 bg-opacity-20">
         <div class="flex w-full items-center">
             <ul class="flex gap-4 flex-grow">
                 <li>

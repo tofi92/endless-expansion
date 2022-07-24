@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   intlify: {
     localeDir: 'locales', // set the `locales` directory at source directory of your Nuxt application
     vueI18n: {
-      locale: "en-US",
+      locale: 'de-DE',
       fallbackLocale: "en-US",
       availableLocales: ["en-US", "de-DE"],
       sync: true,
