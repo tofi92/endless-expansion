@@ -1,0 +1,197 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.inset-enter-active {
+    animation: .5s inset reverse;
+}
+
+.inset-leave-active {
+    animation: .5s inset;
+}
+
+@keyframes inset {
+    0% {
+        clip-path: inset(0% 0% 0% 0%);
+    }
+
+    100% {
+        clip-path: inset(0% 50% 0% 50%);
+    }
+}
+
+.loading-enter-active {
+    animation: .5s entrance reverse;
+}
+
+.loading-leave-active {
+    animation: .5s entrance;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+    clip: rect(auto, auto, 10rem, auto);
+    transition: clip 0.25s ease-in;
+}
+
+.slide-enter,
+.slide-leave-to {
+    clip: rect(auto, auto, 0, auto);
+
+    transition: clip 0.15s ease-out;
+}
+
+.slide-down-enter-active {
+    animation: .5s slideTop;
+}
+
+.slide-down-leave-active {
+    animation: .5s slideTop reverse;
+}
+
+.accordion-enter-active,
+.accordion-leave-active {
+    transition: all 0.25 ease-in-out;
+}
+
+.accordion-enter,
+.accordion-leave-to {
+    transition: all 0.25 ease-in-out;
+    transform: scaleY(0);
+}
+
+.page-enter-active {
+    animation: .2s entrance reverse;
+}
+
+.page-leave-active {
+    animation: .2s entrance;
+}
+
+.loader {
+    -webkit-animation: spinner 1.5s linear infinite;
+    animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    /*border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;*/
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes entrance {
+
+    to,
+    20%,
+    40%,
+    60%,
+    80% {
+        opacity: 0.3;
+    }
+
+    from,
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-500px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.slide-left {
+    animation-name: slideLeft;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+}
+
+.slide-top {
+    animation-name: slideTop;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+}
+
+.entrance {
+    animation-name: entrance;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    /*animation: entrance 400ms linear backwards 1 */
+}
+
+.entrance-short {
+    animation-name: entrance;
+    animation-duration: 180ms;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+}
